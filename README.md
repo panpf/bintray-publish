@@ -24,6 +24,8 @@ buildscript {
 }
 ```
 
+Please replace `$LAST_VERSION` with the latest version: [![Download][version_icon]][version_link]
+
 Add the following code to your module `build.gradle` file:
 
 ```groovy
@@ -31,11 +33,9 @@ Add the following code to your module `build.gradle` file:
 apply plugin: 'com.github.panpf.bintraypublish' 
 ```
 
-Please replace `$LAST_VERSION` with the latest version: [![Download][version_icon]][version_link]
-
 ## Simple usage
 
-Use the `publish` closure to set the info of your package:
+Use the `publish` closure to set the info of your module `build.gradle` file:
 
 ```groovy
 publish {
