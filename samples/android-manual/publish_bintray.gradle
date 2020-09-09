@@ -62,9 +62,9 @@ if (properties.getProperty("bintray.user") != null && properties.getProperty("bi
                 repo = 'maven'
                 name = artifactName
                 desc = 'Bintray aar publishing example'
-                websiteUrl = 'http://github.com/panpf/bintraypublishsampleandroidmanual'
-                vcsUrl = 'http://github.com/panpf/bintraypublishsampleandroidmanual.git'
-                issueTrackerUrl = 'http://github.com/panpf/bintraypublishsampleandroidmanual/issues'
+                websiteUrl = 'https://github.com/panpf/bintraypublishsampleandroidmanual'
+                vcsUrl = 'https://github.com/panpf/bintraypublishsampleandroidmanual.git'
+                issueTrackerUrl = 'https://github.com/panpf/bintraypublishsampleandroidmanual/issues'
                 licenses = ['Apache-2.0']
                 publicDownloadNumbers = true
                 version {
