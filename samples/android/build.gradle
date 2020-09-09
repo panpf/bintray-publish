@@ -1,0 +1,58 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
+
+/*
+ * publish to bintray
+ */
+Properties properties = new Properties()
+File localPropertiesFile = project.file("local.properties")
+if (!localPropertiesFile.exists()) localPropertiesFile = project.file("../local.properties")
+if (localPropertiesFile.exists()) properties.load(localPropertiesFile.newDataInputStream())
+if (properties.getProperty("bintray.user") != null && properties.getProperty("bintray.apiKey") != null) {
+    apply plugin: 'com.github.panpf.bintray.publish'
+
+    publish {
+        groupId = 'com.github.panpf.bintraypublishsampleandroid'
+        artifactId = 'bintraypublishsampleandroid'
+        publishVersion = '1.0.0-alpha01'
+        desc = 'Oh hi, this is a nice description for a project, right?'
+        website = 'https://github.com/panpf/bintraypublishsampleandroid'
+        userOrg = properties.getProperty("bintray.userOrg")
+        bintrayUser = properties.getProperty("bintray.user")
+        bintrayKey = properties.getProperty("bintray.apiKey")
+    }
+}

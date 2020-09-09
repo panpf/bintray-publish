@@ -1,0 +1,27 @@
+plugins {
+    id("groovy")
+    id("java")
+    id("maven-publish")
+}
+
+def groupName = "com.github.panpf.bintray.publish"
+group = groupName
+version = "1.0.0-alpha02"
+
+dependencies {
+    implementation(gradleApi())
+    implementation(localGroovy())
+    implementation("org.codehaus.groovy:groovy-all:2.5.10")
+    implementation("com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5")
+}
+
+publishing {
+    publications {
+        plugin(MavenPublication) {
+            from components.java
+            group groupName
+            artifactId "bintray-publish"
+            version "1.0.0-alpha02"
+        }
+    }
+}

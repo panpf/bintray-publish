@@ -1,0 +1,25 @@
+buildscript{
+    repositories {
+        mavenLocal()
+        google()
+        jcenter()
+        mavenCentral()
+    }
+
+    buildscript{
+        dependencies {
+            classpath "com.android.tools.build:gradle:3.6.4"
+            classpath 'com.github.panpf.bintraypublish:bintraypublish:1.0.0-alpha02' // version of the plugin compiled using composite builds
+            classpath "com.novoda:bintray-release:0.9.2"
+        }
+    }
+}
+
+allprojects{
+    repositories {
+        mavenLocal()
+        google()
+        jcenter()
+        mavenCentral()
+    }
+}
