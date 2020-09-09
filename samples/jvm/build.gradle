@@ -20,7 +20,7 @@ File localPropertiesFile = project.file("local.properties")
 if (!localPropertiesFile.exists()) localPropertiesFile = project.file("../local.properties")
 if (localPropertiesFile.exists()) properties.load(localPropertiesFile.newDataInputStream())
 if (properties.getProperty("bintray.user") != null && properties.getProperty("bintray.apiKey") != null) {
-    apply plugin: 'com.github.panpf.bintray.publish'
+    apply plugin: 'com.github.panpf.bintraypublish'
 
     publish {
         groupId = groupName

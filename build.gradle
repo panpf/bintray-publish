@@ -3,12 +3,17 @@ buildscript{
         jcenter()
         mavenCentral()
     }
+
+    buildscript {
+        dependencies {
+            classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5'
+        }
+    }
 }
 
 allprojects{
     repositories {
         jcenter()
         mavenCentral()
-        google()
     }
 }
