@@ -51,9 +51,7 @@ publish {
 If you use [Kotlin DSL](https://github.com/gradle/kotlin-dsl) use:
 
 ```kotlin
-import com.github.panpf.bintray.publish.PublishExtension
-
-configure<PublishExtension> {
+configure<com.github.panpf.bintray.publish.PublishExtension> {
   userOrg = "panpf"
   groupId = "com.github.pnaf.bintraypublish"
   artifactId = "bintraypublish"
