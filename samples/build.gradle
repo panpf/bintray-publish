@@ -9,7 +9,7 @@ buildscript {
     buildscript {
         dependencies {
             classpath "com.android.tools.build:gradle:4.1.0-rc02"
-            classpath 'com.github.panpf.bintraypublish:bintraypublish:1.0.0-rc01'
+            classpath 'com.github.panpf.bintray-publish:bintray-publish:1.0.0'
             classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5'
         }
     }

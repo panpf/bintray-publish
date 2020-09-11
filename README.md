@@ -1,4 +1,4 @@
-# Bintray Publish
+# bintray-publish
 ![Platform][platform_gradle_icon]
 ![Platform][platform_java_icon]
 ![Platform][platform_android_icon]
@@ -19,7 +19,7 @@ Add the following dependencies to your project `build.gradle` file:
 buildscript {
     ...
     dependencies {
-        classpath 'com.github.panpf.bintraypublish:bintraypublish:$LAST_VERSION'
+        classpath 'com.github.panpf.bintray-publish:bintray-publish:$LAST_VERSION'
     }
 }
 ```
@@ -30,7 +30,7 @@ Add the following code to your module `build.gradle` file:
 
 ```groovy
 // must be applied after your artifact generating plugin (eg. java / com.android.library)
-apply plugin: 'com.github.panpf.bintraypublish' 
+apply plugin: 'com.github.panpf.bintray-publish' 
 ```
 
 ## Simple usage
@@ -40,11 +40,11 @@ Use the `publish` closure to set the info of your module `build.gradle` file:
 ```groovy
 publish {
     userOrg = 'panpf'
-    groupId = 'com.github.pnaf.bintraypublish'
-    artifactId = 'bintraypublish'
+    groupId = 'com.github.pnaf.bintray-publish'
+    artifactId = 'bintray-publish'
     publishVersion = '1.0.0'
     desc = 'Oh hi, this is a nice description for a project, right?'
-    website = 'https://github.com/panpf/bintraypublish'
+    website = 'https://github.com/panpf/bintray-publish'
 }
 ```
 
@@ -55,11 +55,11 @@ import com.github.panpf.bintray.publish.PublishExtension
 
 configure<PublishExtension> {
   userOrg = "panpf"
-  groupId = "com.github.pnaf.bintraypublish"
-  artifactId = "bintraypublish"
+  groupId = "com.github.pnaf.bintray-publish"
+  artifactId = "bintray-publish"
   publishVersion = "1.0.0"
   desc = "Oh hi, this is a nice description for a project, right?"
-  website = "https://github.com/panpf/bintraypublishease"
+  website = "https://github.com/panpf/bintray-publish"
 }
 ```
 
@@ -107,10 +107,10 @@ Please view the [CHANGELOG.md] file
 [platform_android_icon]: https://img.shields.io/badge/Platform-Android-green.svg
 [license_icon]: https://img.shields.io/badge/License-Apache%202-blue.svg
 [license_link]: https://www.apache.org/licenses/LICENSE-2.0
-[version_icon]: https://api.bintray.com/packages/panpf/maven/bintraypublish/images/download.svg
-[version_link]:https://bintray.com/panpf/maven/bintraypublish/_latestVersion
-[github_wiki]: https://github.com/panpf/bintraypublish/wiki
-[github_issues]: https://github.com/panpf/bintraypublish/issues
+[version_icon]: https://api.bintray.com/packages/panpf/maven/bintray-publish/images/download.svg
+[version_link]:https://bintray.com/panpf/maven/bintray-publish/_latestVersion
+[github_wiki]: https://github.com/panpf/bintray-publish/wiki
+[github_issues]: https://github.com/panpf/bintray-publish/issues
 [CHANGELOG.md]: CHANGELOG.md
 
 [novoda/bintray-release]: https://github.com/novoda/bintray-release
