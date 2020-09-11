@@ -11,7 +11,7 @@ if (properties.getProperty("bintray.user") != null && properties.getProperty("bi
 
     def groupName = "com.github.panpf.bintray-publish"
     def artifactName = "bintray-publish"
-    def versionName = "1.0.0-rc01"
+    def versionName = "1.0.0"
 
     group = groupName
     version = versionName
