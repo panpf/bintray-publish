@@ -74,3 +74,7 @@ if (properties.getProperty("bintray.user") != null && properties.getProperty("bi
         }
     }
 }
+
+tasks.withType(GenerateModuleMetadata) {
+    enabled = false
+}

@@ -69,10 +69,28 @@ $ ./gradlew clean build bintrayUpload -PbintrayUser=BINTRAY_USERNAME -PbintrayKe
 
 More info on the available properties and other usages in the [Github Wiki][github_wiki].
 
+### Note:
+If you are using to release the android aar library, and need to temporarily publish aar to mavenLocal() and rely on it from mavenLocal(), and your Gradle version is 6.0+, then you may need to add the following configuration:
+```groovy
+tasks.withType(GenerateModuleMetadata) {
+    enabled = false
+}
+```
+If you use [Kotlin DSL](https://github.com/gradle/kotlin-dsl) use:
+```kotlin
+tasks.withType<GenerateModuleMetadata> {
+    enabled = false
+}
+```
+For specific details, please refer to the document [aar_mavenlocal_gradle6_error.md](docs/aar_mavenlocal_gradle6_error.md)
+
 ## Compatibility
 
 * Gradle: 5.4.1+
 * Android gradle plugin: 3.5.0+
+
+## Known issues
+* [Unable to resolve the aar dependencie from mavenLocal() on Gradle 6.0+](docs/aar_mavenlocal_gradle6_error.md)
 
 ## Links
 
