@@ -40,7 +40,7 @@ Use the `publish` closure to set the info of your module `build.gradle` file:
 ```groovy
 publish {
     userOrg = 'panpf'
-    groupId = 'com.github.pnaf.bintray-publish'
+    groupId = 'com.github.pnapf.bintray-publish'
     artifactId = 'bintray-publish'
     publishVersion = '1.0.0'
     desc = 'Oh hi, this is a nice description for a project, right?'
@@ -53,7 +53,7 @@ If you use [Kotlin DSL](https://github.com/gradle/kotlin-dsl) use:
 ```kotlin
 configure<com.github.panpf.bintray.publish.PublishExtension> {
   userOrg = "panpf"
-  groupId = "com.github.pnaf.bintray-publish"
+  groupId = "com.github.pnapf.bintray-publish"
   artifactId = "bintray-publish"
   publishVersion = "1.0.0"
   desc = "Oh hi, this is a nice description for a project, right?"
