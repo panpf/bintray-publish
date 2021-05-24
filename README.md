@@ -1,3 +1,5 @@
+# Obsolete because bintray and jcenter has stopped serving
+
 # bintray-publish
 ![Platform][platform_gradle_icon]
 ![Platform][platform_java_icon]
