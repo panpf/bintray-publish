@@ -1,4 +1,4 @@
-# Obsolete because bintray and jcenter has stopped serving
+# `Obsolete`. Because bintray and jcenter has stopped serving
 
 # bintray-publish
 ![Platform][platform_gradle_icon]
